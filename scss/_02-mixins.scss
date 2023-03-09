@@ -38,6 +38,13 @@
   align-items: center;
   min-height: $height;
 }
+@mixin centerAll2($height:1px, $width: 1px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: $height;
+  min-width: $width;
+}
 @mixin centerBetween($height:1px) {
   display: flex;
   justify-content: space-between;

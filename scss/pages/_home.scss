@@ -1,0 +1,96 @@
+//----------------------------------------------------------------------------banner
+.banner{
+    padding-top: 7rem;
+    &__wrapper{
+        position: relative;
+        background-image: url(/img/home/lQkfJOiMaudicSk7PQT5k4IDINiWdchEhrOWK5lw.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: 90%;
+        @include centerAll(40rem);
+        margin-bottom:3rem;
+    }
+    &__content{
+        margin: 0 1.5rem;
+        max-width: 40rem;
+        width: 100%;
+        h1{
+            font-size: 4rem;
+            font-weight: bolder;
+            margin-bottom: 4rem;
+        }
+        button{
+            border-radius: 3rem;
+            border: 1px solid;
+            display: inline-block;
+            padding: .5rem 1.5rem; 
+            font-weight: bold;
+            cursor: pointer;
+        }
+    }
+}
+
+.gifting{
+    &__wrapper{
+        background-color: #006241;
+        img{
+                    @include imgFit(48rem, 24rem);
+                    max-height: 24rem;
+                    width: 100%;
+                    height: 50%;
+                    position: absolute;
+        
+                }
+    }
+    
+
+
+
+
+    
+    // &__wrapper{
+    //     max-height: 48rem;
+    //     background-color: #006241;
+    //     img{
+    //         @include imgFit(48rem, 24rem);
+    //         max-height: 24rem;
+    //         width: 100%;
+    //         height: 50%;
+    //         position: absolute;
+
+    //     }
+    // }
+    // &__content{
+    //     background-color: #006241;
+    //     color: $clr-light;
+    //     top: 24rem;
+    //     height: 24rem;
+    //     width: 100%;
+    //     display: block;
+    //     position: relative;
+    //     text-align: center;
+    // }
+    // &__text{
+    //     padding: 4rem 0;
+    //     margin: 0 auto;
+    //     max-width: 80%;
+    //     h2{
+    //         font-size: 2.4rem;
+    //         font-weight: 600;
+    //         margin-bottom: 3rem;
+    //     }
+    //     p{
+    //         font-size: 1.6rem;
+    //         margin-bottom: 3rem;
+    //     }
+    //     button{
+    //         border-radius: 3rem;
+    //         border: 1px solid;
+    //         display: inline-block;
+    //         padding: .5rem 1.5rem; 
+    //         font-weight: bold;
+    //         cursor: pointer;
+    //     }
+    // }
+    
+}

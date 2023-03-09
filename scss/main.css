@@ -68,10 +68,6 @@ a {
   text-decoration: none;
 }
 
-p {
-  margin-bottom: 1rem;
-}
-
 .container {
   width: 100%;
   max-width: 120rem;
@@ -458,6 +454,100 @@ p {
 }
 .btn-dark:hover {
   background-color: #141414;
+}
+
+.header {
+  background-color: cyan;
+  padding: 1.5rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.header .branding {
+  display: flex;
+  justify-self: center;
+}
+.header .branding img {
+  width: 4rem;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__content {
+  display: none;
+}
+.header .toggle__menu span {
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #545454;
+  display: block;
+  margin-bottom: 0.5rem;
+  border-radius: 5rem;
+  transition: 0.5s ease;
+}
+.header .toggle__menu.open span:first-child {
+  transform: translate(0, 10px);
+  transition: 0.5s ease;
+}
+.header .toggle__menu.open span:nth-child(2) {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+.header .toggle__menu.open span:last-child {
+  transform: translate(0, -6px);
+  transition: 0.5s ease;
+}
+
+.banner {
+  padding-top: 7rem;
+}
+.banner__wrapper {
+  position: relative;
+  background-image: url(/img/home/lQkfJOiMaudicSk7PQT5k4IDINiWdchEhrOWK5lw.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40rem;
+  margin-bottom: 3rem;
+}
+.banner__content {
+  margin: 0 1.5rem;
+  max-width: 40rem;
+  width: 100%;
+}
+.banner__content h1 {
+  font-size: 4rem;
+  font-weight: bolder;
+  margin-bottom: 4rem;
+}
+.banner__content button {
+  border-radius: 3rem;
+  border: 1px solid;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.gifting__wrapper {
+  background-color: #006241;
+}
+.gifting__wrapper img {
+  width: 48rem;
+  height: 24rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+  max-height: 24rem;
+  width: 100%;
+  height: 50%;
+  position: absolute;
 }
 
 .block__header {
