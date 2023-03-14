@@ -1,0 +1,203 @@
+//----------------------------------------------------------------------------banner
+.banner{
+    padding-top: 7rem;
+    &__wrapper{
+        position: relative;
+        background-image: url(/img/home/lQkfJOiMaudicSk7PQT5k4IDINiWdchEhrOWK5lw.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: 90%;
+        @include centerAll(40rem);
+        // margin-bottom:3rem;
+    }
+    &__content{
+        margin: 0 1.5rem;
+        max-width: 40rem;
+        width: 100%;
+        h1{
+            font-size: 4rem;
+            font-weight: bolder;
+            margin-bottom: 4rem;
+        }
+        button{
+            border-radius: 3rem;
+            border: 1px solid;
+            display: inline-block;
+            padding: .5rem 1.5rem; 
+            font-weight: bold;
+            cursor: pointer;
+            &:hover{
+                background-color: hsla(180, 20%, 78%, 0.103);
+            }
+        }
+    }
+    @include mediaQuery($desktop){
+        padding-bottom: 3rem;
+        &__wrapper{
+            background-position-x: unset;
+            background-position: center;
+            @include centerAll(59rem);
+        }
+        &__content{
+            color: $clr-primary-dark    ;
+            // margin: 0 1.5rem;
+            max-width: 125rem;
+            width: 100%;
+            h1{
+                font-size: 7rem;
+                font-weight: bolder;
+                margin-bottom: 4rem;
+            }
+            button{
+                border-radius: 3rem;
+                border: 1px solid;
+                display: inline-block;
+                padding: .5rem 1.5rem; 
+                font-weight: bold;
+                cursor: pointer;
+            }
+        }
+        
+    }
+}
+
+.gifting{
+    &__frame{
+        margin: 3rem 0;
+        max-height: 48rem;
+        img{
+            @include imgFit(48rem, 24rem);
+            max-height: 24rem;
+            width: 100%;
+            height: 50%;
+            position: relative;
+        }
+
+    }
+    &__content{
+        max-height: 24rem;
+        width: 100%;
+        text-align: center;
+    }
+    &__text{
+        padding: 3rem 0;
+        margin: 0 auto;
+        max-width: 85%;
+        h2{
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+        }
+        p{
+            font-size: 1.6rem;
+            margin-bottom: 3rem;
+        }
+        button{
+            border-radius: 3rem;
+            border: 1px solid;
+            display: inline-block;
+            padding: .5rem 1.5rem; 
+            font-weight: bold;
+            cursor: pointer;
+            &:hover{
+                background-color: hsla(180, 3%, 87%, 0.226);
+            }
+        }
+    }
+    
+    #egift{
+        color: $clr-light;
+    }
+    #rich{
+        color: $clr-light;
+    }
+    #spring{
+        color: $clr-light;
+    }
+    @include mediaQuery($desktop){
+        &__frame{
+            min-width: 65rem;
+            max-width: 160rem;
+            margin: 0 auto;
+        }
+        #egift{
+            margin-bottom: 3rem;
+            display: flex;
+            img{
+                @include imgFit(60rem, 30rem);
+                max-height: 30rem;
+                width: 100%;
+                height: 50%;
+                position: relative;
+            }
+            .gifting__content{
+                margin: auto 0;
+            }
+        }
+        &__grid{
+            max-width: 160rem;
+            margin: 0 auto;
+            margin-bottom: 3rem;
+            @include grid(2, 3rem);
+            img{
+                @include imgFit(77rem, 40rem);
+                max-height: 64rem;
+                width: 100%;
+                position: relative;
+            }
+            
+        }
+        .gifting__text{
+            padding: 3rem 0;
+            margin: 0 auto;
+            max-width: 85%;
+        }
+        #rich{
+            min-height: 63rem;
+            width: 100%;
+        }
+        #spring{
+            min-height: 63rem;
+            width: 100%;
+        }
+        #reuse{
+            min-height: 63rem;
+            width: 100%;
+        }
+        #deliver{
+            min-height: 63rem;
+            width: 100%;
+        }
+        #sweet{
+            margin-bottom: 3rem;
+            display: flex;
+            img{
+                @include imgFit(60rem, 30rem);
+                max-height: 30rem;
+                width: 100%;
+                height: 50%;
+                position: relative;
+            }
+            .gifting__content{
+                margin: auto 0;
+            }
+        }
+        #stories{
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: row-reverse;
+            img{
+                @include imgFit(60rem, 30rem);
+                max-height: 30rem;
+                width: 100%;
+                height: 50%;
+                position: relative;
+            }
+            .gifting__content{
+                margin: auto 0;
+            }
+        }
+    }
+    
+}
+
