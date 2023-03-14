@@ -37,9 +37,10 @@
     &__wrapper{
         background-image: url(/img/rewards/star-mobile.jpg);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
+        width: 100%;
         background-position-x: center;
-        min-height: 64.4rem;
+        min-height: 100vh;
         .star__banner{
             text-align: center;
             padding: 3.2rem 1.6rem;
@@ -85,19 +86,19 @@
     // }
     @include mediaQuery($desktop){
         &__wrapper{
-            min-height: 81rem;
+            min-height: 100vh;
             background-color: $clr-primary-light;
             background-image: url(/img/rewards/xl-hero-desktop_2021.png);
-            background-size: 130%;
+            background-size: 160%;
             background-position-y: center;
-            background-position-x: -30rem;
+            // background-position-x: -10rem;
             background-origin: padding-box;
         }
         .star__banner{
-            max-width: 160em;
+            min-height: 100vh;
             padding: unset;
             max-width: 35%;
-            min-height: 81rem;
+            // min-height: 60rem;
             display: flex;
             justify-content: start;
             // align-items: center;
@@ -133,7 +134,7 @@
     }
 }
 
-.started{
+.columned{
     padding-top: 5rem;
     &__header{
         margin-bottom: 5rem;
@@ -147,15 +148,16 @@
             font-size: 1.4rem;
         }
     }
-    &__content{
-        
-    }
     &__items{
         display: grid;
         grid-template-columns: 1fr 8fr;
         grid-gap: 3rem 2rem;
         align-items: start;
+        margin-bottom: 3rem;
         // gap: 1rem;
+        img{
+            width: 10rem;
+        }
         h2{
             display: inline-block;
             font-size: 2.4rem;
@@ -172,7 +174,8 @@
             }
             p{
                 font-size: 1.4rem;
-                margin-bottom: 3rem;
+                margin-bottom: 1rem;
+                
             }
             a{
                 text-decoration: underline;
@@ -235,7 +238,7 @@
     }
     &__tab{
         position: relative;
-        min-height: 50vh;
+        min-height: 50rem;
         display: flex;
         justify-content: center;
         &__content{
@@ -290,7 +293,7 @@
             }
         }
         &__tab{
-            min-height: 30vh;
+            min-height: 30rem;
             &__content{
                 display: flex;
                 align-items: center;
@@ -323,6 +326,254 @@
                 }
             }
     
+        }
+    }
+}
+
+.cash{
+    padding-top: 8.8rem;
+    color: $clr-dark;
+    background-color: #f2f0eb;
+    &__header{
+        text-align: center;
+        padding-bottom: 4.8rem;
+        h2{
+            font-size: clamp(2.4rem, 3vw, 2.8rem);
+            font-weight: 600;
+        }
+        p{
+            font-size: clamp(1.4rem, 3vw, 1.6rem);
+            padding-top: 1.6rem;
+            line-height: 1.5;
+        }
+    }
+    &__items{
+        padding-bottom: 3.2rem;
+        border-bottom: 1px solid $clr-gray;
+        h6{
+            font-size: clamp(1.9rem, 3vw, 2.4rem);
+            font-weight: 600;
+        }
+        p{
+            font-size: clamp(1.4rem, 3vw, 1.6rem);
+        }
+        .cash__cards{
+            display: flex;
+            gap: 2rem;
+            padding-top: 2.8rem;
+            img{
+                width: 11.2rem;
+            }
+            h3{
+                font-size: clamp(1.6rem, 3vw, 1.9rem);
+                font-weight: 600;
+            }
+            p{
+                font-size: clamp(1.4rem, 3vw, 1.6rem);
+                padding-top: 1.6rem;
+            }
+        }
+    }
+    &__items:last-child{
+        padding-top: 3rem;
+        border-bottom: unset;
+    }
+
+    @include mediaQuery($desktop){
+        padding-top: 4.8rem;
+        &__header{
+            max-width: 66rem;
+            margin: 0 auto;
+        }
+        &__items{
+            display: grid;
+            grid-template-columns: 1fr 1.7fr 1.7fr 1.3fr;
+            .cash__cards{
+                padding-top: 0;
+            }
+        }
+        &__items:last-child{
+            padding-top: 8.2rem;
+            
+        }
+    }
+}
+
+.restriction{
+    padding: 5rem 0;
+    font-size: 1.3rem;
+    &__wrapper{
+        p{
+            margin-bottom: 3.2rem;
+        }
+    }
+    &__content{
+        margin-bottom: 1.6rem;
+        h2{
+            font-weight: 700;
+            color: #686868;
+            margin-bottom: 1.6rem;
+        }
+        p{
+            margin-bottom: 1.6rem;
+        }
+    }
+    @include mediaQuery($desktop){
+        font-size: 1.4rem;
+        &__items{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 2rem;
+        }
+    }
+}
+
+.linksR{
+    padding: 3rem;
+    background-color: $clr-light;
+    margin-top: 2rem;
+    width: 100%;
+    border-top: 1.5px solid $clr-gray;
+    &__wrapper{
+        padding-bottom: 3rem;
+        border-bottom: 1.5px solid $clr-gray;
+
+    }
+    &__item{
+        margin: 3rem 0;
+        h4{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            i{
+                transition: .5s ease;
+                &.open{
+                    transform: rotate(-180deg);
+                    transition: .5s ease;
+                }
+            }
+            span{
+                color: #000000DE;
+                font-size: clamp(1.7rem, 3vw, 2rem);
+                font-weight: 500;
+                font-family: $ff-primary;
+            }
+        }
+        ul{
+            max-height: 0;
+            overflow: hidden;
+            margin-left: 2rem;
+            transition: .5s ease;
+            &.open{
+                max-height: 25rem;
+                transition: .5s ease;
+                
+            }
+            li{
+                margin: 2rem 0;
+            }
+            a{
+                font-size: clamp(1.4rem, 3vw, 1.6rem);
+                color: $clr-fnt;
+            }
+            a:hover{
+                color: $clr-dark;
+                cursor: pointer;
+            }
+        }
+        
+        &:last-child{
+            cursor: pointer;
+        }
+    }
+
+    @include mediaQuery($desktop){
+        &__wrapper{
+            width: 100%;
+            @include grid (7, 2fr);
+            justify-content: space-around;
+        }
+        &__item{
+            h4{
+                display: unset;
+                i{
+                    display: none;
+                }
+            }
+            ul{
+                max-height: 30rem;
+                margin-left: 0rem;
+            }
+        }
+    }
+}
+
+.footerR{
+    padding: 0 3rem;
+    padding-bottom: 3rem;
+    &__social{
+        margin-bottom: 2rem;
+        width: 100%;
+        ul{
+            display: flex;  
+            li{
+                margin-right: 2rem; 
+                img{
+                    width: 3.5rem;
+                    cursor: pointer;
+                    &:hover{
+                        transform: translateY(-20%);
+                        transition: .2s ease-in-out;
+                    }
+                    
+                }
+            }
+            
+        }
+        i{
+            border-radius: 50%;
+        }
+    }
+    &__bottom{
+        .footerR__click{
+            ul{   
+                li{
+                    margin-bottom: 2rem;
+                    a{
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        &:hover{
+                            text-decoration: underline;
+                    }
+                    
+                    }
+                }
+                span{
+                    display: none;
+                }
+            }
+        }
+        small{
+            font-size: 1.3rem;
+            color: rgba(0,0,0,.58)
+        }
+    }
+    
+    @include mediaQuery($desktop){
+        
+        &__bottom{
+            justify-content: space-between;
+            .footerR__click{
+                ul{
+                    display: flex;
+                    span{
+                        display: block;
+                        padding: 0 3rem;
+                    }
+                }
+                
+            }
+            
         }
     }
 }
